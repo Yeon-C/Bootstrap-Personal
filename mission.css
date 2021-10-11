@@ -1,0 +1,81 @@
+.pgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  align-items: stretch;
+}
+.pgrid img {
+  border: 1px solid #ccc;
+  max-width: 100%;
+}
+body {
+  display: grid; /* putting website in grids*/
+  grid-template-areas:
+    "header header header"
+    "bar bar bar"
+    "article nav nav"
+    "footer footer footer";
+  grid-template-rows: 100px 460px 1fr 60px;
+  grid-template-columns: 1fr 1fr 40%;
+  grid-gap: 10px;
+  height: 100vh;
+  margin: 0;
+  background-color: rgb(240, 197, 184);
+}
+
+#pageHeader {
+  grid-area: header;
+}
+#pageFooter {
+  grid-area: footer;
+}
+#mainNav {
+  grid-area: nav;
+}
+#mainArticle {
+  grid-area: article;
+}
+#jumbo{
+  grid-area: bar;
+} 
+
+#jumbo2{
+  animation-name: animate;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animate {
+  0%   {background-color: red;}
+  10%  {background-color: orange;}
+
+  35%  {background-color: green;}
+  50%  {background-color: blue;}
+  65%  {background-color: indigo;}
+  85%  {background-color: violet;}
+  100% {background-color: red;}
+}
+/*=====mission=====*/
+#mission {
+  height: 550px;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px dotted coral;
+  border-radius: 20%;
+  margin: 30px auto;
+}
+
+#mission p {
+  font-size: 24px;
+  text-align: center;
+  font-family: "Staatliches", cursive;
+  color: cadetblue;
+}
+
+footer {
+  animation-name: animate;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}

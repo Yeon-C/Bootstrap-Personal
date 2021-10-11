@@ -1,0 +1,147 @@
+
+body {
+  display: grid;
+  grid-template-areas: /* putting website in grids*/
+    "header header header"
+    "bar bar bar"
+    "article article nav"
+    "footer footer footer";
+  grid-template-rows: 100px 570px 1fr 60px;
+  grid-template-columns: 1fr 1fr 30%;
+  grid-gap: 10px;
+  height: 100vh;
+  margin: 0;
+  background-color: rgb(240, 197, 184);
+}
+
+#pageHeader {
+  grid-area: header;
+}
+#pageFooter {
+  grid-area: footer;
+}
+#mainNav {
+  grid-area: nav;
+}
+#mainArticle {
+  grid-area: article;
+  margin-left:20px;
+}
+#jumbo {
+  grid-area: bar;
+} 
+
+/*===== big logo =====*/
+#biglogo{
+  background-image: url("img/BigPLogo.png");
+  background-size: cover;
+  
+}
+#jumbo{
+  color:white;
+  font-family: "Comic Sans MS";
+}
+
+#jumbo h1{
+  animation-name: animateT;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  font-size:40px;
+}
+
+#jumbo p{
+  font-size:28px;
+  animation-name: animateT;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+#jumbo a{
+  background-color: rgb(77, 105, 230);
+  color:white;
+}
+
+@keyframes animate {
+  0%   {background-color: red;}
+  10%  {background-color: orange;}
+
+  35%  {background-color: green;}
+  50%  {background-color: blue;}
+  65%  {background-color: indigo;}
+  85%  {background-color: violet;}
+  100% {background-color: red;}
+}
+@keyframes animateT {
+  0%   {color: red;}
+  10%  {color: orange;}
+  25%  {color: yellow;}
+  35%  {color: green;}
+  50%  {color: blue;}
+  65%  {color: indigo;}
+  85%  {color: violet;}
+  100% {color: red;}
+}
+
+/*=====chefs=====*/
+#mainArticle{
+  background-color: rgb(165, 173, 162);
+  padding-top:40px;
+  padding-left:-20px;
+}
+
+#mission h2{
+  text-align: center;
+  font-family:Georgia;
+  font-size: 40px;
+  margin-bottom: -80px;
+}
+.chefs{
+display: flex;
+background-color: rgb(165, 173, 162);
+justify-content:space-evenly;
+height: 750px;
+width: auto;
+align-items: center;
+z-index: 2;
+}
+.chefs .fit-picture{
+  height: 350px;
+  width: 350px;
+  z-index: 2;
+
+}
+
+.chefs p{
+  text-align:center;
+  font-family: 'Staatliches', cursive;
+  font-size: 24px;
+  margin-top:10px;
+}
+
+#chefint{
+    height: 650px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 15px double violet;
+    border-radius: 20%;
+    margin: 30px auto;
+    flex-direction:column;
+    
+}
+
+#chefint p {
+  font-size: 24px;
+  text-align: justify;
+  margin:10px 30px 10px 30px;
+  font-family: "Comic Sans MS";
+  color: cadetblue;
+}
+
+
+footer {
+  animation-name: animate;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
